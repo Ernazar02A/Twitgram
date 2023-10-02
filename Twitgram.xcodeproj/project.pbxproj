@@ -19,6 +19,7 @@
 		52A7DA332ACAF49700F258CE /* TweetTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A7DA322ACAF49700F258CE /* TweetTableViewCell.swift */; };
 		52A7DA372ACAF50A00F258CE /* extention + UITableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A7DA362ACAF50A00F258CE /* extention + UITableViewCell.swift */; };
 		52A7DA3D2ACB156900F258CE /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A7DA3C2ACB156900F258CE /* ProfileViewController.swift */; };
+		52A7DA442ACB1DA400F258CE /* ProfileTableViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A7DA432ACB1DA400F258CE /* ProfileTableViewHeader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		52A7DA322ACAF49700F258CE /* TweetTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetTableViewCell.swift; sourceTree = "<group>"; };
 		52A7DA362ACAF50A00F258CE /* extention + UITableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "extention + UITableViewCell.swift"; sourceTree = "<group>"; };
 		52A7DA3C2ACB156900F258CE /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		52A7DA432ACB1DA400F258CE /* ProfileTableViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewHeader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +122,7 @@
 		52A7DA302ACAF45400F258CE /* Component */ = {
 			isa = PBXGroup;
 			children = (
+				52A7DA422ACB1D7E00F258CE /* Views */,
 				52A7DA312ACAF47300F258CE /* Cells */,
 			);
 			path = Component;
@@ -205,6 +208,14 @@
 			path = DirectMessages;
 			sourceTree = "<group>";
 		};
+		52A7DA422ACB1D7E00F258CE /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				52A7DA432ACB1DA400F258CE /* ProfileTableViewHeader.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -277,6 +288,7 @@
 			files = (
 				52A7DA2B2ACAEF5100F258CE /* SearchViewController.swift in Sources */,
 				52A7DA152ACAED4600F258CE /* MainTabbarViewController.swift in Sources */,
+				52A7DA442ACB1DA400F258CE /* ProfileTableViewHeader.swift in Sources */,
 				52A7DA3D2ACB156900F258CE /* ProfileViewController.swift in Sources */,
 				52A7DA2D2ACAEF6C00F258CE /* NotificationsViewController.swift in Sources */,
 				52A7DA372ACAF50A00F258CE /* extention + UITableViewCell.swift in Sources */,
