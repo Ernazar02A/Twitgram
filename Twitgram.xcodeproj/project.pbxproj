@@ -18,6 +18,7 @@
 		52A7DA2F2ACAEF9B00F258CE /* DirectMessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A7DA2E2ACAEF9B00F258CE /* DirectMessagesViewController.swift */; };
 		52A7DA332ACAF49700F258CE /* TweetTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A7DA322ACAF49700F258CE /* TweetTableViewCell.swift */; };
 		52A7DA372ACAF50A00F258CE /* extention + UITableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A7DA362ACAF50A00F258CE /* extention + UITableViewCell.swift */; };
+		52A7DA3D2ACB156900F258CE /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A7DA3C2ACB156900F258CE /* ProfileViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		52A7DA2E2ACAEF9B00F258CE /* DirectMessagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectMessagesViewController.swift; sourceTree = "<group>"; };
 		52A7DA322ACAF49700F258CE /* TweetTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetTableViewCell.swift; sourceTree = "<group>"; };
 		52A7DA362ACAF50A00F258CE /* extention + UITableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "extention + UITableViewCell.swift"; sourceTree = "<group>"; };
+		52A7DA3C2ACB156900F258CE /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,9 +68,9 @@
 		52A7DA0F2ACAED4600F258CE /* Twitgram */ = {
 			isa = PBXGroup;
 			children = (
-				52A7DA342ACAF4CE00F258CE /* Extentions */,
 				52A7DA242ACAED7C00F258CE /* App */,
-				52A7DA262ACAEF0100F258CE /* Controllers */,
+				52A7DA3B2ACB14EB00F258CE /* Worlflow */,
+				52A7DA342ACAF4CE00F258CE /* Extentions */,
 				52A7DA302ACAF45400F258CE /* Component */,
 				52A7DA252ACAED8400F258CE /* Resourse */,
 			);
@@ -94,22 +96,23 @@
 			path = Resourse;
 			sourceTree = "<group>";
 		};
-		52A7DA262ACAEF0100F258CE /* Controllers */ = {
+		52A7DA262ACAEF0100F258CE /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				52A7DA392ACB14B200F258CE /* General */,
 				52A7DA272ACAEF2100F258CE /* Core */,
 			);
-			path = Controllers;
+			path = Screens;
 			sourceTree = "<group>";
 		};
 		52A7DA272ACAEF2100F258CE /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				52A7DA142ACAED4600F258CE /* MainTabbarViewController.swift */,
-				52A7DA282ACAEF4700F258CE /* HomeViewController.swift */,
-				52A7DA2A2ACAEF5100F258CE /* SearchViewController.swift */,
-				52A7DA2C2ACAEF6C00F258CE /* NotificationsViewController.swift */,
-				52A7DA2E2ACAEF9B00F258CE /* DirectMessagesViewController.swift */,
+				52A7DA382ACB10BC00F258CE /* Tabbar */,
+				52A7DA3E2ACB15D700F258CE /* HomeScreen */,
+				52A7DA3F2ACB15E800F258CE /* SearchScreen */,
+				52A7DA402ACB160400F258CE /* NotificationsScreen */,
+				52A7DA412ACB161600F258CE /* DirectMessages */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -144,6 +147,62 @@
 				52A7DA362ACAF50A00F258CE /* extention + UITableViewCell.swift */,
 			);
 			path = UITableViewCell;
+			sourceTree = "<group>";
+		};
+		52A7DA382ACB10BC00F258CE /* Tabbar */ = {
+			isa = PBXGroup;
+			children = (
+				52A7DA142ACAED4600F258CE /* MainTabbarViewController.swift */,
+			);
+			path = Tabbar;
+			sourceTree = "<group>";
+		};
+		52A7DA392ACB14B200F258CE /* General */ = {
+			isa = PBXGroup;
+			children = (
+				52A7DA3C2ACB156900F258CE /* ProfileViewController.swift */,
+			);
+			path = General;
+			sourceTree = "<group>";
+		};
+		52A7DA3B2ACB14EB00F258CE /* Worlflow */ = {
+			isa = PBXGroup;
+			children = (
+				52A7DA262ACAEF0100F258CE /* Screens */,
+			);
+			path = Worlflow;
+			sourceTree = "<group>";
+		};
+		52A7DA3E2ACB15D700F258CE /* HomeScreen */ = {
+			isa = PBXGroup;
+			children = (
+				52A7DA282ACAEF4700F258CE /* HomeViewController.swift */,
+			);
+			path = HomeScreen;
+			sourceTree = "<group>";
+		};
+		52A7DA3F2ACB15E800F258CE /* SearchScreen */ = {
+			isa = PBXGroup;
+			children = (
+				52A7DA2A2ACAEF5100F258CE /* SearchViewController.swift */,
+			);
+			path = SearchScreen;
+			sourceTree = "<group>";
+		};
+		52A7DA402ACB160400F258CE /* NotificationsScreen */ = {
+			isa = PBXGroup;
+			children = (
+				52A7DA2C2ACAEF6C00F258CE /* NotificationsViewController.swift */,
+			);
+			path = NotificationsScreen;
+			sourceTree = "<group>";
+		};
+		52A7DA412ACB161600F258CE /* DirectMessages */ = {
+			isa = PBXGroup;
+			children = (
+				52A7DA2E2ACAEF9B00F258CE /* DirectMessagesViewController.swift */,
+			);
+			path = DirectMessages;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -218,6 +277,7 @@
 			files = (
 				52A7DA2B2ACAEF5100F258CE /* SearchViewController.swift in Sources */,
 				52A7DA152ACAED4600F258CE /* MainTabbarViewController.swift in Sources */,
+				52A7DA3D2ACB156900F258CE /* ProfileViewController.swift in Sources */,
 				52A7DA2D2ACAEF6C00F258CE /* NotificationsViewController.swift in Sources */,
 				52A7DA372ACAF50A00F258CE /* extention + UITableViewCell.swift in Sources */,
 				52A7DA112ACAED4600F258CE /* AppDelegate.swift in Sources */,

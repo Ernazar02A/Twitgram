@@ -54,7 +54,7 @@ class TweetTableViewCell: UITableViewCell {
     }()
     private lazy var replyButton: UIButton = {
         let view = UIButton(type: .system)
-        view.setImage(UIImage(systemName: "bubble.left"), for: .normal)
+        view.setImage(UIImage(named: "replyIcon"), for: .normal)
         view.tintColor = .systemGray2
         view.translatesAutoresizingMaskIntoConstraints = false
         view.addTarget(self, action: #selector(replyButtonDidTap), for: .touchUpInside)
@@ -62,7 +62,7 @@ class TweetTableViewCell: UITableViewCell {
     }()
     private lazy var retweetButton: UIButton = {
         let view = UIButton(type: .system)
-        view.setImage(UIImage(systemName: "arrow.2.squarepath"), for: .normal)
+        view.setImage(UIImage(named: "retweetIcon"), for: .normal)
         view.tintColor = .systemGray2
         view.translatesAutoresizingMaskIntoConstraints = false
         view.addTarget(self, action: #selector(retweetButtonDidTap), for: .touchUpInside)
@@ -70,7 +70,7 @@ class TweetTableViewCell: UITableViewCell {
     }()
     private lazy var likeButton: UIButton = {
         let view = UIButton(type: .system)
-        view.setImage(UIImage(systemName: "heart"), for: .normal)
+        view.setImage(UIImage(named: "heartIcon"), for: .normal)
         view.tintColor = .systemGray2
         view.translatesAutoresizingMaskIntoConstraints = false
         view.addTarget(self, action: #selector(likeButtonDidTap), for: .touchUpInside)
@@ -78,7 +78,7 @@ class TweetTableViewCell: UITableViewCell {
     }()
     private lazy var shareButton: UIButton = {
         let view = UIButton(type: .system)
-        view.setImage(UIImage(systemName: "square.and.arrow.up"), for: .normal)
+        view.setImage(UIImage(named: "shareIcon"), for: .normal)
         view.tintColor = .systemGray2
         view.addTarget(self, action: #selector(shareButtonDidTap), for: .touchUpInside)
         view.translatesAutoresizingMaskIntoConstraints = false

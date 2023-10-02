@@ -25,13 +25,32 @@ class HomeViewController: UIViewController {
     
     private func setup() {
         setupView()
+        setupNavigationBar()
     }
     
     private func setupView() {
         view.addSubview(timelineTableView)
         timelineTableView.frame = view.frame
     }
-
+    
+    private func setupNavigationBar() {
+        let size = 26
+        let logoImageView = UIImageView(frame: CGRect(x: 0, y: 0, width: size, height: size))
+        logoImageView.contentMode = .scaleAspectFill
+        logoImageView.image = UIImage(named: "twitterLogo")
+        
+        let middleView = UIView(frame: CGRect(x: 0, y: 0, width: size, height: size))
+        middleView.addSubview(logoImageView)
+        navigationItem.titleView = middleView
+        
+        let profileImage = UIImage(systemName: "person")
+        navigationItem.leftBarButtonItem = UIBarButtonItem(image: profileImage, style: .plain, target: self, action: #selector(profileBarButtonDidTap))
+    }
+    
+    @objc private func profileBarButtonDidTap() {
+        let vc = ProfileViewController()
+        navigationController?.pushViewController(vc, animated: true)
+    }
 }
 
 //MARK: - UITableViewDataSource
