@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class HomeViewController: UIViewController {
     
@@ -34,6 +35,13 @@ class HomeViewController: UIViewController {
     }
     
     private func setupNavigationBar() {
+        setupNavigationTitleView()
+        let profileImage = UIImage(systemName: "person")
+        navigationItem.leftBarButtonItem = UIBarButtonItem(image: profileImage, style: .plain, target: self, action: #selector(profileBarButtonDidTap))
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "rectangle.portrait.and.arrow.right"), style: .plain, target: self, action: #selector(didTapSignOut))
+    }
+    
+    private func setupNavigationTitleView() {
         let size = 26
         let logoImageView = UIImageView(frame: CGRect(x: 0, y: 0, width: size, height: size))
         logoImageView.contentMode = .scaleAspectFill
@@ -42,9 +50,11 @@ class HomeViewController: UIViewController {
         let middleView = UIView(frame: CGRect(x: 0, y: 0, width: size, height: size))
         middleView.addSubview(logoImageView)
         navigationItem.titleView = middleView
-        
-        let profileImage = UIImage(systemName: "person")
-        navigationItem.leftBarButtonItem = UIBarButtonItem(image: profileImage, style: .plain, target: self, action: #selector(profileBarButtonDidTap))
+    }
+    
+    @objc private func didTapSignOut() {
+        try? Auth.auth().signOut()
+        handleAuthentication()
     }
     
     @objc private func profileBarButtonDidTap() {
@@ -52,9 +62,18 @@ class HomeViewController: UIViewController {
         navigationController?.pushViewController(vc, animated: true)
     }
     
+    private func handleAuthentication() {
+        if Auth.auth().currentUser == nil {
+            let vc = UINavigationController(rootViewController: OnboardingViewController())
+            vc.modalPresentationStyle = .fullScreen
+            present(vc, animated: false)
+        }
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         navigationController?.navigationBar.isHidden = false
+        handleAuthentication()
     }
 }
 
