@@ -34,6 +34,12 @@
 		52A7DA612ACD416200F258CE /* AuthenticationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A7DA602ACD416200F258CE /* AuthenticationViewModel.swift */; };
 		52A7DA652ACD4C6500F258CE /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A7DA642ACD4C6500F258CE /* AuthService.swift */; };
 		52A7DA6A2ACF263600F258CE /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A7DA692ACF263600F258CE /* LoginViewController.swift */; };
+		52A7DA6E2ACFEF3E00F258CE /* TwitterUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A7DA6D2ACFEF3E00F258CE /* TwitterUser.swift */; };
+		52A7DA702ACFF10300F258CE /* DatabaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A7DA6F2ACFF10300F258CE /* DatabaseService.swift */; };
+		52A7DA732AD12B9D00F258CE /* HomeViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A7DA722AD12B9D00F258CE /* HomeViewViewModel.swift */; };
+		52A7DA752AD13BF300F258CE /* ProfileDataFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A7DA742AD13BF300F258CE /* ProfileDataFormViewController.swift */; };
+		52A7DA792AD13F6B00F258CE /* ProfileDataFormViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A7DA782AD13F6B00F258CE /* ProfileDataFormViewViewModel.swift */; };
+		52A7DA7B2AD1BC2B00F258CE /* StorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A7DA7A2AD1BC2B00F258CE /* StorageService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +64,12 @@
 		52A7DA602ACD416200F258CE /* AuthenticationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewModel.swift; sourceTree = "<group>"; };
 		52A7DA642ACD4C6500F258CE /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		52A7DA692ACF263600F258CE /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		52A7DA6D2ACFEF3E00F258CE /* TwitterUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitterUser.swift; sourceTree = "<group>"; };
+		52A7DA6F2ACFF10300F258CE /* DatabaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseService.swift; sourceTree = "<group>"; };
+		52A7DA722AD12B9D00F258CE /* HomeViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewViewModel.swift; sourceTree = "<group>"; };
+		52A7DA742AD13BF300F258CE /* ProfileDataFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDataFormViewController.swift; sourceTree = "<group>"; };
+		52A7DA782AD13F6B00F258CE /* ProfileDataFormViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDataFormViewViewModel.swift; sourceTree = "<group>"; };
+		52A7DA7A2AD1BC2B00F258CE /* StorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -194,6 +206,7 @@
 		52A7DA392ACB14B200F258CE /* General */ = {
 			isa = PBXGroup;
 			children = (
+				52A7DA762AD13F1D00F258CE /* ProfileDataFormScreen */,
 				52A7DA3C2ACB156900F258CE /* ProfileViewController.swift */,
 			);
 			path = General;
@@ -210,6 +223,7 @@
 		52A7DA3E2ACB15D700F258CE /* HomeScreen */ = {
 			isa = PBXGroup;
 			children = (
+				52A7DA712AD12B8700F258CE /* ViewModel */,
 				52A7DA282ACAEF4700F258CE /* HomeViewController.swift */,
 			);
 			path = HomeScreen;
@@ -285,6 +299,7 @@
 		52A7DA622ACD4C3D00F258CE /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				52A7DA6C2ACFEF1800F258CE /* DTOs */,
 				52A7DA632ACD4C5100F258CE /* NetworkService */,
 			);
 			path = Model;
@@ -294,6 +309,8 @@
 			isa = PBXGroup;
 			children = (
 				52A7DA642ACD4C6500F258CE /* AuthService.swift */,
+				52A7DA6F2ACFF10300F258CE /* DatabaseService.swift */,
+				52A7DA7A2AD1BC2B00F258CE /* StorageService.swift */,
 			);
 			path = NetworkService;
 			sourceTree = "<group>";
@@ -304,6 +321,39 @@
 				52A7DA692ACF263600F258CE /* LoginViewController.swift */,
 			);
 			path = LoginScreen;
+			sourceTree = "<group>";
+		};
+		52A7DA6C2ACFEF1800F258CE /* DTOs */ = {
+			isa = PBXGroup;
+			children = (
+				52A7DA6D2ACFEF3E00F258CE /* TwitterUser.swift */,
+			);
+			path = DTOs;
+			sourceTree = "<group>";
+		};
+		52A7DA712AD12B8700F258CE /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				52A7DA722AD12B9D00F258CE /* HomeViewViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		52A7DA762AD13F1D00F258CE /* ProfileDataFormScreen */ = {
+			isa = PBXGroup;
+			children = (
+				52A7DA772AD13F5300F258CE /* ViewModel */,
+				52A7DA742AD13BF300F258CE /* ProfileDataFormViewController.swift */,
+			);
+			path = ProfileDataFormScreen;
+			sourceTree = "<group>";
+		};
+		52A7DA772AD13F5300F258CE /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				52A7DA782AD13F6B00F258CE /* ProfileDataFormViewViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -390,13 +440,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52A7DA702ACFF10300F258CE /* DatabaseService.swift in Sources */,
 				52A7DA2B2ACAEF5100F258CE /* SearchViewController.swift in Sources */,
 				52A7DA152ACAED4600F258CE /* MainTabbarViewController.swift in Sources */,
 				52A7DA442ACB1DA400F258CE /* ProfileTableViewHeader.swift in Sources */,
 				52A7DA3D2ACB156900F258CE /* ProfileViewController.swift in Sources */,
 				52A7DA2D2ACAEF6C00F258CE /* NotificationsViewController.swift in Sources */,
+				52A7DA792AD13F6B00F258CE /* ProfileDataFormViewViewModel.swift in Sources */,
 				52A7DA372ACAF50A00F258CE /* extention + UITableViewCell.swift in Sources */,
 				52A7DA112ACAED4600F258CE /* AppDelegate.swift in Sources */,
+				52A7DA7B2AD1BC2B00F258CE /* StorageService.swift in Sources */,
+				52A7DA6E2ACFEF3E00F258CE /* TwitterUser.swift in Sources */,
 				52A7DA5A2ACC7D9B00F258CE /* OnboardingViewController.swift in Sources */,
 				52A7DA132ACAED4600F258CE /* SceneDelegate.swift in Sources */,
 				52A7DA612ACD416200F258CE /* AuthenticationViewModel.swift in Sources */,
@@ -404,8 +458,10 @@
 				52A7DA292ACAEF4700F258CE /* HomeViewController.swift in Sources */,
 				52A7DA6A2ACF263600F258CE /* LoginViewController.swift in Sources */,
 				52A7DA5E2ACC86E800F258CE /* RegisterViewController.swift in Sources */,
+				52A7DA752AD13BF300F258CE /* ProfileDataFormViewController.swift in Sources */,
 				52A7DA2F2ACAEF9B00F258CE /* DirectMessagesViewController.swift in Sources */,
 				52A7DA332ACAF49700F258CE /* TweetTableViewCell.swift in Sources */,
+				52A7DA732AD12B9D00F258CE /* HomeViewViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
