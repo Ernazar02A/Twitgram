@@ -7,8 +7,13 @@
 
 import UIKit
 import FirebaseAuth
+import Combine
 
 class HomeViewController: UIViewController {
+    
+    private var viewModel = HomeViewViewModel()
+    
+    private var subscriptions: Set<AnyCancellable> = []
     
     private lazy var timelineTableView: UITableView = {
         let view = UITableView()
@@ -27,6 +32,7 @@ class HomeViewController: UIViewController {
     private func setup() {
         setupView()
         setupNavigationBar()
+        bindViews()
     }
     
     private func setupView() {
@@ -74,6 +80,22 @@ class HomeViewController: UIViewController {
         super.viewWillAppear(true)
         navigationController?.navigationBar.isHidden = false
         handleAuthentication()
+        viewModel.retreiveUser()
+    }
+    
+    func completeUserOnboarding() {
+        let vc = ProfileDataFormViewController()
+        present(vc, animated: true)
+    }
+    
+    func bindViews() {
+        viewModel.$user.sink { [weak self] user in
+            guard let user = user else { return }
+            if !user.isUserOnboarded {
+                self?.completeUserOnboarding()
+            }
+        }
+        .store(in: &subscriptions)
     }
 }
 

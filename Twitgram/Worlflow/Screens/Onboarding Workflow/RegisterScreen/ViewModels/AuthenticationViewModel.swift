@@ -38,6 +38,9 @@ final class AuthenticationViewModel {
         guard let email = email,
               let password = password else { return }
         AuthService.shared.registerUser(with: email, password: password)
+            .handleEvents(receiveOutput: { [weak self] user in
+                self?.user = user
+            })
             .sink { [weak self] completion in
                 
                 if case .failure(let error) = completion {
@@ -45,9 +48,22 @@ final class AuthenticationViewModel {
                 }
                 
             } receiveValue: { [weak self] user in
-                self?.user = user
+                self?.createRecord(for: user)
             }
             .store(in: &subscriptions)
+
+    }
+    
+    func createRecord(for user: User) {
+        DatabaseService.shared.collectionUsers(add: user)
+            .sink { [weak self] completion in
+                if case .failure(let error) = completion {
+                    self?.error = error.localizedDescription
+                }
+            } receiveValue: { state in
+                print("adding user record to database: \(state)")
+            }
+                    .store(in: &subscriptions)
 
     }
     
