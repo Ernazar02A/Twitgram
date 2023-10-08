@@ -39,7 +39,7 @@ class OnboardingViewController: UIViewController {
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
-    private let loginButton: UIButton = {
+    private lazy var loginButton: UIButton = {
         let view = UIButton(type: .system)
         view.setTitle("login", for: .normal)
         view.titleLabel?.font = .systemFont(ofSize: 14)
